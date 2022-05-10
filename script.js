@@ -6,11 +6,11 @@ const form = document.querySelector("#form");
 const inputTransactionName = document.querySelector("#text");
 const inputTransactionAmount = document.querySelector("#amount");
 
-const localStorageTransctions = JSON.parse(
+const localStorageTransactions = JSON.parse(
   localStorage.getItem("transactions")
 );
 let transactions =
-  localStorage.getItem("transactions") !== null ? localStorageTransctions : [];
+  localStorage.getItem("transactions") !== null ? localStorageTransactions : [];
 
 const removeTransaction = (ID) => {
   transactions = transactions.filter((transaction) => transaction.id !== ID);
